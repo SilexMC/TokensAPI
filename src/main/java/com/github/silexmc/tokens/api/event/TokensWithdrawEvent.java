@@ -7,14 +7,14 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 @RequiredArgsConstructor
 public class TokensWithdrawEvent extends Event implements Cancellable {
     private static final HandlerList HANDLER_LIST = new HandlerList();
 
     private final Player sender;
-    private final BigDecimal tokens;
+    private final BigInteger tokens;
 
     private boolean cancellable;
 

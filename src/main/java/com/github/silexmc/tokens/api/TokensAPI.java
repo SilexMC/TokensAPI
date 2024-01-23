@@ -1,10 +1,11 @@
 package com.github.silexmc.tokens.api;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.UUID;
 
 public interface TokensAPI {
-    BigDecimal getTokens(UUID uniqueID);
+    BigInteger getTokens(UUID uniqueID);
 
     String getStringTokens(UUID uniqueID);
 
@@ -16,27 +17,27 @@ public interface TokensAPI {
 
     String getFormatTotalTokens(UUID uniqueID);
 
-    void setTokens(UUID uniqueID, BigDecimal value);
+    void setTokens(UUID uniqueID, BigInteger value);
 
-    void giveTokens(UUID uniqueID, BigDecimal value);
+    void giveTokens(UUID uniqueID, BigInteger value);
 
-    void takeTokens(UUID uniqueID, BigDecimal value);
+    void takeTokens(UUID uniqueID, BigInteger value);
 
-    boolean hasTokens(UUID uniqueID, BigDecimal value);
+    boolean hasTokens(UUID uniqueID, BigInteger value);
 
-    default void setTokens(UUID uniqueID, Double value) {
-        this.setTokens(uniqueID, BigDecimal.valueOf(value));
+    default void setTokens(UUID uniqueID, Integer value) {
+        this.setTokens(uniqueID, BigInteger.valueOf(value));
     }
 
-    default void giveTokens(UUID uniqueID, Double value) {
-        this.giveTokens(uniqueID, BigDecimal.valueOf(value));
+    default void giveTokens(UUID uniqueID, Integer value) {
+        this.giveTokens(uniqueID, BigInteger.valueOf(value));
     }
 
-    default void takeTokens(UUID uniqueID, Double value) {
-        this.takeTokens(uniqueID, BigDecimal.valueOf(value));
+    default void takeTokens(UUID uniqueID, Integer value) {
+        this.takeTokens(uniqueID, BigInteger.valueOf(value));
     }
 
-    default boolean hasTokens(UUID uniqueID, Double value) {
-        return this.hasTokens(uniqueID, BigDecimal.valueOf(value));
+    default boolean hasTokens(UUID uniqueID, Integer value) {
+        return this.hasTokens(uniqueID, BigInteger.valueOf(value));
     }
 }
