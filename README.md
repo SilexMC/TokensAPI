@@ -8,7 +8,7 @@ repositories {
 
 dependencies {
     // Tokens-API 
-    compileOnly("com.github.SilexMC:TokensAPI:1.0.1")
+    compileOnly("com.github.SilexMC:TokensAPI:1.0.2")
 }
 ```
 
@@ -30,7 +30,7 @@ dependencies {
     <dependency>
         <groupId>com.github.SilexMC</groupId>
         <artifactId>TokensAPI</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>

@@ -1,6 +1,5 @@
 package com.github.silexmc.tokens.api;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.UUID;
 
@@ -11,7 +10,7 @@ public interface TokensAPI {
 
     String getFormatTokens(UUID uniqueID);
 
-    BigDecimal getTotalTokens(UUID uniqueID);
+    BigInteger getTotalTokens(UUID uniqueID);
 
     String getStringTotalTokens(UUID uniqueID);
 
